@@ -40,6 +40,7 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 
 # Alias
 alias ls="ls --color"
+alias hx="helix"
 alias rz="source $ZDOTDIR/.zshrc"
 alias ez="$EDITOR $ZDOTDIR/.zshrc"
 
