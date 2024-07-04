@@ -1,0 +1,44 @@
+[language-server.emmet-lsp]
+command = "emmet-language-server"
+args = ["--stdio"]
+
+# JSON
+[[language]]
+name = "json"
+formatter = { command = "prettier", args = [ "--parser", "json" ] }
+
+# HTML and CSS
+[[language]]    
+name = "html"
+auto-format = true
+formatter = { command = "prettier", args = [ "--parser", "html" ] }
+language-servers = [ "emmet-lsp", "vscode-html-language-server", "tailwindcss-ls" ]
+
+[[language]]
+name = "css"
+auto-format = true
+formatter = { command = "prettier", args = [ "--parser", "css" ] }
+language-servers = [ "emmet-lsp", "vscode-css-language-server", "tailwindcss-ls" ]
+
+# JS, TS, JSX and TSX
+[[language]]
+name = "javascript"    
+auto-format = true
+formatter = { command = "prettier" }
+
+[[language]]
+name = "typescript"
+auto-format = true    
+formatter = { command = "prettier", args = [ "--parser", "typescript" ] }
+
+[[language]]
+name = "jsx"
+auto-format = true
+formatter = { command = "prettier" }
+language-servers = [ "emmet-lsp", "typescript-language-server", "tailwindcss-ls" ]
+
+[[language]]
+name = "tsx"
+auto-format = true
+formatter = { command = "prettier", args = [ "--parser", "typescript" ] }
+language-servers = [ "emmet-lsp", "typescript-language-server", "tailwindcss-ls" ]
