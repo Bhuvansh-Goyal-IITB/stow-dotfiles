@@ -9,7 +9,7 @@ ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 source "${ZINIT_HOME}/zinit.zsh"
 
 # Adding .local/bin to PATH
-export PATH="/home/bhuvansh/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 
 export ZDOTDIR="$HOME"
 export EDITOR="vim"
