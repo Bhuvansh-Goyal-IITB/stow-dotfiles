@@ -44,8 +44,8 @@ alias hx="helix"
 alias rz="source $ZDOTDIR/.zshrc"
 alias ez="$EDITOR $ZDOTDIR/.zshrc"
 
-# FZF with zsh
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# Fzf with zsh
+eval "$(fzf --zsh)"
 
 # Zoxide with zsh
 eval "$(zoxide init --cmd cd zsh)"
