@@ -5,6 +5,7 @@ args = ["--stdio"]
 # JSON
 [[language]]
 name = "json"
+auto-format = true
 formatter = { command = "prettier", args = [ "--parser", "json" ] }
 
 # HTML and CSS
@@ -28,7 +29,7 @@ formatter = { command = "prettier" }
 
 [[language]]
 name = "typescript"
-auto-format = true    
+auto-format = true
 formatter = { command = "prettier", args = [ "--parser", "typescript" ] }
 
 [[language]]

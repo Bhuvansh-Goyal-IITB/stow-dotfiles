@@ -1,4 +1,19 @@
 theme = "base16_transparent"
 
 [editor]
+line-number = "relative"
+auto-format = true
 true-color = true
+mouse = false
+
+[keys.normal]
+C-s = ":w!"
+C-w = ":buffer-close"
+y = [":clipboard-yank", "yank"]
+
+[keys.insert]
+C-s = [":w!", "normal_mode"]
+C-w = [":buffer-close", "normal_mode"]
+
+[keys.select]
+y = [":clipboard-yank", "yank"]
