@@ -10,6 +10,7 @@ source "${ZINIT_HOME}/zinit.zsh"
 
 # Env Vars
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.zig/zls/zig-out/bin:$PATH"
 export ZDOTDIR="$HOME"
 export EDITOR="vim"
 

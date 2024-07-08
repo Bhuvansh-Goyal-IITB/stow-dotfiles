@@ -1,10 +1,18 @@
-theme = "base16_transparent"
+# theme = "tokyonight_storm"
+# theme = "base16_transparent"
+theme = "gruvbox_transparent"
+# theme = "tokyonight_moon_transparent"
 
 [editor]
 line-number = "relative"
+mouse = false
 auto-format = true
 true-color = true
-mouse = false
+
+[editor.indent-guides]
+render = true
+character = "▏"
+skip-levels = 1
 
 [keys.normal]
 C-s = ":w!"

@@ -1,0 +1,4 @@
+inherits = "tokyonight_moon"
+
+"ui.background" = {}
+"ui.text" = { fg = "fg" }

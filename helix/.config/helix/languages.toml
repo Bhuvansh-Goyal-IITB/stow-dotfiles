@@ -1,6 +1,20 @@
+use-grammars = { only = ["python", "bash", "json", "html", "css", "tsx", "jsx", "typescript", "javascript"] }
+
 [language-server.emmet-lsp]
 command = "emmet-language-server"
 args = ["--stdio"]
+
+# LUA
+[[language]]
+name = "lua"
+auto-format = true
+
+# PYTHON
+[[language]]
+name = "python"
+auto-format = true
+language-servers = [ "pyright" ]
+formatter = { command = "ruff", args = ["format", "--stdin-filename", " "] }
 
 # JSON
 [[language]]
