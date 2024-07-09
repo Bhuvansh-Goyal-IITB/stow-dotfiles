@@ -1,5 +1,6 @@
-use-grammars = { only = ["python", "bash", "json", "html", "css", "tsx", "jsx", "typescript", "javascript"] }
+use-grammars = { only = ["lua", "python", "bash", "json", "html", "css", "tsx", "jsx", "typescript", "javascript"] }
 
+# EMMET LSP 
 [language-server.emmet-lsp]
 command = "emmet-language-server"
 args = ["--stdio"]

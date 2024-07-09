@@ -11,6 +11,8 @@ source "${ZINIT_HOME}/zinit.zsh"
 # Env Vars
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.zig/zls/zig-out/bin:$PATH"
+export PATH="$PATH:$(go env GOPATH)/bin"
+export PATH="$PATH:/usr/local/go/bin"
 export ZDOTDIR="$HOME"
 export EDITOR="vim"
 
