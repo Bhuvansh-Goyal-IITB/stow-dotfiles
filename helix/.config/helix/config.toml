@@ -10,6 +10,9 @@ true-color = true
 render = true
 skip-levels = 1
 
+[editor.soft-wrap]
+enable = true
+
 [keys.normal]
 C-s = ":w!"
 C-w = ":buffer-close"
