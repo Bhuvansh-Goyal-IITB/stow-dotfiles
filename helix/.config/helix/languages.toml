@@ -1,9 +1,47 @@
-use-grammars = { only = ["lua", "python", "bash", "json", "html", "css", "tsx", "jsx", "typescript", "javascript"] }
+use-grammars = { only = [
+  "lua",
+  "python",
+  "bash",
+  "json",
+  "html",
+  "css",
+  "tsx",
+  "jsx",
+  "typescript",
+  "javascript",
+] }
 
 # EMMET LSP 
 [language-server.emmet-lsp]
 command = "emmet-language-server"
 args = ["--stdio"]
+
+# JSON LSP
+[language-server.vscode-json-language-server]
+command = "vscode-json-language-server"
+args = ["--stdio"]
+
+[language-server.vscode-json-language-server.config]
+provideFormatter = true
+
+[language-server.vscode-json-language-server.config.json]
+validate = { enable = true }
+schemaDownload = { enable = true }
+trace = { server = "off" }
+
+[[language-server.vscode-json-language-server.config.json.schemas]]
+fileMatch = ["package.json"]
+url = "https://json.schemastore.org/package.json"
+
+[[language-server.vscode-json-language-server.config.json.schemas]]
+fileMatch = ["tsconfig.json"]
+url = "https://json.schemastore.org/tsconfig.json"
+
+# TOML
+[[language]]
+name = "toml"
+auto-format = true
+roots = ["*.toml"]
 
 # LUA
 [[language]]
@@ -14,47 +52,52 @@ auto-format = true
 [[language]]
 name = "python"
 auto-format = true
-language-servers = [ "pyright" ]
+language-servers = ["pyright"]
 formatter = { command = "ruff", args = ["format", "--stdin-filename", " "] }
 
 # JSON
 [[language]]
 name = "json"
 auto-format = true
-formatter = { command = "prettier", args = [ "--parser", "json" ] }
+formatter = { command = "prettier", args = ["--parser", "json"] }
+roots = ["."]
 
 # HTML and CSS
-[[language]]    
+[[language]]
 name = "html"
 auto-format = true
-formatter = { command = "prettier", args = [ "--parser", "html" ] }
-language-servers = [ "emmet-lsp", "vscode-html-language-server", "tailwindcss-ls" ]
+formatter = { command = "prettier", args = ["--parser", "html"] }
+language-servers = [
+  "emmet-lsp",
+  "vscode-html-language-server",
+  "tailwindcss-ls",
+]
 
 [[language]]
 name = "css"
 auto-format = true
-formatter = { command = "prettier", args = [ "--parser", "css" ] }
-language-servers = [ "emmet-lsp", "vscode-css-language-server", "tailwindcss-ls" ]
+formatter = { command = "prettier", args = ["--parser", "css"] }
+language-servers = ["emmet-lsp", "vscode-css-language-server", "tailwindcss-ls"]
 
 # JS, TS, JSX and TSX
 [[language]]
-name = "javascript"    
+name = "javascript"
 auto-format = true
 formatter = { command = "prettier" }
 
 [[language]]
 name = "typescript"
 auto-format = true
-formatter = { command = "prettier", args = [ "--parser", "typescript" ] }
+formatter = { command = "prettier", args = ["--parser", "typescript"] }
 
 [[language]]
 name = "jsx"
 auto-format = true
 formatter = { command = "prettier" }
-language-servers = [ "emmet-lsp", "typescript-language-server", "tailwindcss-ls" ]
+language-servers = ["emmet-lsp", "typescript-language-server", "tailwindcss-ls"]
 
 [[language]]
 name = "tsx"
 auto-format = true
-formatter = { command = "prettier", args = [ "--parser", "typescript" ] }
-language-servers = [ "emmet-lsp", "typescript-language-server", "tailwindcss-ls" ]
+formatter = { command = "prettier", args = ["--parser", "typescript"] }
+language-servers = ["emmet-lsp", "typescript-language-server", "tailwindcss-ls"]
