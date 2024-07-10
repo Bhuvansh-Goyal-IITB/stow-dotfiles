@@ -6,7 +6,6 @@ use-grammars = { only = [
   "html",
   "css",
   "tsx",
-  "jsx",
   "typescript",
   "javascript",
 ] }
@@ -60,7 +59,12 @@ formatter = { command = "ruff", args = ["format", "--stdin-filename", " "] }
 name = "json"
 auto-format = true
 formatter = { command = "prettier", args = ["--parser", "json"] }
-roots = ["."]
+
+[[language]]
+name = "jsonc"
+auto-format = true
+formatter = { command = "prettier", args = ["--parser", "json"] }
+file-types = [{ glob = "tsconfig.json" }]
 
 # HTML and CSS
 [[language]]
