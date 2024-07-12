@@ -13,8 +13,12 @@ export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.zig/zls/zig-out/bin:$PATH"
 export PATH="$PATH:$(go env GOPATH)/bin"
 export PATH="$PATH:/usr/local/go/bin"
+
 export ZDOTDIR="$HOME"
-export EDITOR="vim"
+export EDITOR="helix"
+
+export LANG="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
 
 # ZSH plugins
 zi light zsh-users/zsh-syntax-highlighting
@@ -24,6 +28,7 @@ zi light Aloxaf/fzf-tab
 # ZSH completions
 zi ice as"completion"; zi snippet OMZP::docker/completions/_docker
 zi ice as"completion"; zi snippet OMZP::docker-compose/_docker-compose
+zi ice as"completion"; zi snippet "https://github.com/eza-community/eza/blob/main/completions/zsh/_eza"
 
 # Usefull plugins
 zi snippet OMZP::sudo
@@ -41,7 +46,8 @@ zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 
 # Alias
-alias ls="ls --color"
+alias ls="eza --icons=auto"
+alias lsnc="ls --color=never"
 alias hx="helix"
 alias rz="source $ZDOTDIR/.zshrc"
 alias ez="$EDITOR $ZDOTDIR/.zshrc"
